@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Image Test</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+    }
+    .hover-image {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .hover-image img.hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .hover-image:hover img.hover {
+      opacity: 1;
+    }
+
+    .hover-image img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://example.com" target="_blank">
+    <div class="hover-image">
+      <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=600" alt="Default Image">
+      <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=600" alt="Hover Image" class="hover">
+    </div>
+  </a>
+</body>
+</html>
